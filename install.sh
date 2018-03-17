@@ -40,7 +40,7 @@ apt-get -y install wget git-core ipython ipython-notebook build-essential libssl
 
 # install all Python3 libraries
 printf "${BLUE}Installing python3 libraries and packages...${NC}\n"
-pip3 install pandas keras PyMySQL requests tensorflow==1.5.0 geopandas==0.2.1 jupyter uwsgi flask scikit-learn
+pip3 install pandas keras PyMySQL requests tensorflow==1.5.0 geopandas==0.2.1 jupyter uwsgi flask scikit-learn pillow h5py seaborn
 
 # update numpy for 0xa/0xb version issue
 printf "${BLUE}Patch for NumPy version issues...${NC}\n"
@@ -56,7 +56,7 @@ mkdir /root/notebooks
 mkdir /root/notebooks/deep-learning-with-python-notebooks
 
 # configure jupyter notebook
-printf "${BLUE}Create folders where files and demos will be held...${NC}\n"
+printf "${BLUE}Configuring Jupyter...${NC}\n"
 jupyter notebook --generate-config
 echo "c = get_config()" >> /root/.jupyter/jupyter_notebook_config.py
 echo "c.IPKernelApp.pylab = 'inline'" >> /root/.jupyter/jupyter_notebook_config.py
