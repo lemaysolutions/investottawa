@@ -36,11 +36,11 @@ echo  "Installation Script for InvestOttawa / IBM I3"
 # install all libraries
 printf "${BLUE}Updating and installing libraries and packages...${NC}\n"
 apt-get update
-apt-get -y install wget git-core ipython ipython-notebook build-essential libssl-dev libffi-dev python-dev python3-pip python3-numpy python3-scipy
+apt-get -y install wget git-core build-essential libssl-dev libffi-dev python-dev python3-pip python3-numpy python3-scipy
 
 # install all Python3 libraries
 printf "${BLUE}Installing python3 libraries and packages...${NC}\n"
-pip3 install pandas keras PyMySQL requests tensorflow==1.5.0 geopandas==0.2.1 jupyter uwsgi flask scikit-learn pillow h5py seaborn
+pip3 install jupyter pandas keras PyMySQL requests tensorflow==1.5.0 geopandas==0.2.1 uwsgi flask scikit-learn pillow h5py seaborn
 
 # update numpy for 0xa/0xb version issue
 printf "${BLUE}Patch for NumPy version issues...${NC}\n"
